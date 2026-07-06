@@ -49,11 +49,9 @@ img{
 
 }
 
-/*====================================
-
-        Navbar Start
-
-====================================*/
+/*==========================
+        NAVBAR
+==========================*/
 
 .navbar_area{
 
@@ -62,23 +60,31 @@ img{
     left: 0;
     width: 100%;
     z-index: 999;
-    background: rgba(8, 15, 30, .92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
 }
+
 .main_menu{
 
-    width:100%;
     padding:22px 0;
     transition:.4s;
+    background:rgba(8,15,30,.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
 }
 
 .logo{
 
-    color:#fff !important;
     font-size:32px;
     font-weight:700;
+    color:#ffffff !important;
+    text-decoration:none;
+
+}
+
+.logo:hover{
+
+    color:#ffffff !important;
+
 }
 
 .logo span{
@@ -87,34 +93,36 @@ img{
 
 }
 
-.menu_list li{
+/* Menu */
+
+.menu_list .nav-item{
 
     margin-left:18px;
 
 }
 
-.menu_list li a{
+.menu_list .nav-link{
 
-    color:#fff;
+    color:#ffffff !important;
     font-size:16px;
     font-weight:500;
-    transition:.3s;
     position:relative;
+    transition:.3s;
 
 }
 
-.menu_list li a:hover{
+.menu_list .nav-link:hover{
 
-    color:#0ea5e9;
+    color:#0ea5e9 !important;
 
 }
 
-.menu_list li a::after{
+.menu_list .nav-link::after{
 
-    position:absolute;
     content:"";
+    position:absolute;
     left:0;
-    bottom:0;
+    bottom:-6px;
     width:0%;
     height:2px;
     background:#0ea5e9;
@@ -122,19 +130,34 @@ img{
 
 }
 
-.menu_list li a:hover::after{
+.menu_list .nav-link:hover::after{
 
     width:100%;
 
 }
 
+.menu_list .nav-link.active{
+
+    color:#0ea5e9 !important;
+
+}
+
+.menu_list .nav-link.active::after{
+
+    width:100%;
+
+}
+
+/* Button */
+
 .cv_btn{
 
     margin-left:30px;
-    padding:12px 24px;
-    border-radius:8px;
+    padding:12px 26px;
     background:#0ea5e9;
     color:#fff;
+    text-decoration:none;
+    border-radius:8px;
     font-weight:600;
     transition:.3s;
 
@@ -146,6 +169,8 @@ img{
     color:#fff;
 
 }
+
+/* Mobile Button */
 
 .menu_btn{
 
@@ -161,71 +186,20 @@ img{
 
 .menu_btn i{
 
-    color:#fff;
+    color:#ffffff;
     font-size:28px;
 
 }
 
-.menu_list li a.active{
+/* Sticky */
 
-    color:#0ea5e9 !important;
+.menu_fixed{
 
-}
-
-.menu_list li a.active::after{
-
-    width:100%;
-
-}
-
-.main_menu.menu_fixed{
-
-    background:rgba(8,17,31,.92);
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
     padding:16px 0;
+    background:rgba(8,15,30,.95);
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
 
 }
-
-/*====================================
-
-        Mobile Menu
-
-====================================*/
-
-@media(max-width:991px){
-
-.main_menu{
-
-    background:#08111f;
-    padding:15px 0;
-
-}
-
-.menu_list{
-
-    margin-top:20px;
-
-}
-
-.menu_list li{
-
-    margin-left:0;
-    margin-bottom:12px;
-
-}
-
-.cv_btn{
-
-    display:inline-block;
-    margin-top:15px;
-    margin-left:0;
-
-}
-
-}
-
 /*====================================
 
         Hero Section Start
@@ -238,7 +212,7 @@ img{
     min-height:100vh;
     display:flex;
     align-items:center;
-    padding:170px 0 120px;
+    padding:150px 0 120px;
 }
 
 .hero_left{
@@ -491,7 +465,7 @@ img{
 .about_area{
 
     width:100%;
-    padding:120px 0;
+    padding:60px 0;
     position:relative;
 
 }
@@ -735,6 +709,161 @@ img{
     grid-template-columns:1fr;
 
 }
+
+}
+
+/*==========================
+      SKILLS SECTION
+==========================*/
+
+.skills_section{
+
+    padding:100px 0;
+    background:#08111f;
+
+}
+
+/* Section Title */
+
+.section_title{
+
+    margin-bottom:60px;
+
+}
+
+.section_title h5{
+
+    color:#0ea5e9;
+    font-size:18px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+}
+
+.section_title h2{
+
+    color:#ffffff;
+    font-size:46px;
+    font-weight:700;
+    margin:15px 0;
+
+}
+
+.section_title p{
+
+    color:#9ca3af;
+    max-width:650px;
+    margin:auto;
+    line-height:44px;
+
+}
+
+/* Left Side */
+
+.skills_left h3{
+
+    color:#ffffff;
+    font-size:32px;
+    font-weight:700;
+    margin-bottom:20px;
+
+}
+
+.skills_left p{
+
+    color:#9ca3af;
+    line-height:32px;
+    margin-bottom:40px;
+
+}
+
+/* Skill Item */
+
+.skill_item{
+
+    margin-bottom:30px;
+
+}
+
+.skill_info{
+
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+
+}
+
+.skill_info span{
+
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+
+}
+
+/* Progress */
+
+.progress{
+
+    height:10px;
+    border-radius:50px;
+    background:#1a2335;
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    width:0;
+    height:100%;
+    border-radius:50px;
+    background:#0ea5e9;
+    transition:width 1.5s ease;
+
+}
+
+/* Right Side */
+
+.skills_cards{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+
+}
+
+.skill_card{
+
+    background:#121d31;
+    padding:35px 20px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+    border:1px solid transparent;
+
+}
+
+.skill_card:hover{
+
+    transform:translateY(-8px);
+    border-color:#0ea5e9;
+
+}
+
+.skill_card i{
+
+    font-size:55px;
+    color:#0ea5e9;
+    margin-bottom:20px;
+
+}
+
+.skill_card h4{
+
+    color:#ffffff;
+    font-size:22px;
+    font-weight:600;
 
 }
 
