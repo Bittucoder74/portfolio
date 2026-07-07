@@ -1,0 +1,781 @@
+/*====================================
+
+        Navbar Responsive
+
+====================================*/
+
+
+/*========== Tablet ==========*/
+
+@media (max-width:991px){
+
+    .main_menu{
+
+        padding:15px 0;
+        backdrop-filter:blur(12px);
+        -webkit-backdrop-filter:blur(12px);
+
+    }
+
+    .menu_btn{
+
+        border:none !important;
+        box-shadow:none !important;
+        padding:0;
+
+    }
+
+    .menu_btn:focus{
+
+        box-shadow:none !important;
+
+    }
+
+    .menu_btn i{
+
+        color:#ffffff;
+        font-size:30px;
+        transition:.3s;
+
+    }
+
+    .menu_btn:hover i{
+
+        color:#25a8f2;
+        transform:rotate(90deg);
+
+    }
+
+    #navbarMenu{
+
+        background:#08111f;
+        margin-top:20px;
+        padding:25px;
+        border-radius:15px;
+        box-shadow:0 15px 35px rgba(0,0,0,.35);
+        text-align:center;
+        animation:menuDown .35s ease;
+
+    }
+
+    .menu_list{
+
+        gap:12px;
+        margin-left: 0 !important;
+    }
+
+    .menu_list .nav-item{
+
+        margin:4px 0;
+
+    }
+
+    .menu_list .nav-link{
+
+        display:block;
+        padding:10px 0;
+        border-radius:8px;
+        transition:.3s;
+
+    }
+
+    .menu_list .nav-link:hover{
+
+        background:rgba(37,168,242,.12);
+        color:#25a8f2;
+
+    }
+
+     .cv_btn{
+        display: block;
+        width: 100%;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+
+}
+
+@keyframes menuDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*========== Mobile ==========*/
+
+@media (max-width:767px){
+
+    .main_menu{
+
+        padding:15px 0;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .navbar-collapse{
+
+        margin-top:15px;
+
+        padding:18px;
+
+    }
+
+    .menu_list li{
+
+        margin:10px 0;
+
+    }
+
+    .menu_list li a{
+
+        font-size:16px;
+
+    }
+
+    .cv_btn{
+
+        width:100%;
+
+        padding:12px;
+
+        margin-top:18px;
+
+        font-size:15px;
+
+    }
+
+}
+
+/*====================================
+
+        Hero Responsive
+
+====================================*/
+
+@media (max-width:991px){
+
+    .hero_area{
+        padding:120px 0 70px;
+    }
+
+    .hero_area .row{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+
+    .hero_area .container{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .hero_left{
+        width:100%;
+        max-width:100%;
+        margin:0 auto;
+        padding:0;
+        text-align:center;
+    }
+
+    .hero_subtitle{
+        font-size:1.5rem;
+        margin-bottom:10px;
+    }
+
+    .hero_title{
+        font-size:3rem;
+        line-height:1.2;
+        margin-bottom:15px;
+    }
+
+    .hero_designation{
+        font-size:2rem;
+        line-height:1.4;
+        margin-bottom:20px;
+    }
+
+    .hero_text{
+        width:100%;
+        max-width:100%;
+        margin:0 auto 30px;
+        font-size:1rem;
+        line-height:1.8;
+    }
+
+    .hero_btn{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        align-items:center;
+    }
+
+    .download_btn,
+    .project_btn{
+        width:100%;
+        max-width:320px;
+        text-align:center;
+    }
+
+    .hero_social{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:18px;
+        margin-top:30px;
+    }
+
+    .hero_right{
+        margin-bottom:40px;
+    }
+
+    .hero_img{
+    width:220px;
+    height:220px;
+    margin:0 auto 40px;
+    }
+
+    .hero_img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    }
+
+}
+
+/* 
+
+====== HERO SMALL MOBILE SCREEN ======
+*/
+
+@media (max-width:576px){
+
+    .hero_area{
+        padding:110px 0 60px;
+    }
+
+    .hero_area .container{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    .hero_title{
+        font-size:2.4rem;
+    }
+
+    .hero_designation{
+        font-size:1.6rem;
+    }
+
+    .hero_text{
+        font-size:.95rem;
+        line-height:1.8;
+    }
+
+    .hero_img img{
+        width:220px;
+        height:220px;
+    }
+
+    .download_btn,
+    .project_btn{
+        max-width:100%;
+    }
+
+}
+
+/*====================================
+
+        About Responsive
+
+====================================*/
+
+/*============================
+        Tablet
+=============================*/
+
+@media (max-width:991px){
+
+    .about_area{
+
+        padding:80px 0;
+
+    }
+
+    .about_img{
+
+        width:320px;
+        margin:0 auto 50px;
+
+    }
+
+    .about_content{
+
+        max-width:100%;
+
+    }
+
+    .section_title{
+
+        font-size:36px;
+        line-height:50px;
+
+    }
+
+    .about_text{
+
+        font-size:16px;
+        line-height:30px;
+
+    }
+
+    .experience_box{
+
+        right:-15px;
+        bottom:25px;
+
+    }
+
+    .hire_btn {
+        display: table;
+        margin: 0 auto;
+    }
+
+}
+
+
+/*============================
+        Mobile
+=============================*/
+
+@media (max-width:767px){
+
+    .about_area{
+
+        padding:60px 0;
+
+    }
+
+    .about_img{
+
+        width:280px;
+        margin:0 auto 40px;
+
+    }
+
+    .about_img img{
+
+        height:380px;
+
+    }
+
+    .experience_box{
+
+        width:150px;
+        padding:16px 12px;
+        right:-10px;
+        bottom:20px;
+
+    }
+
+    .experience_box h3{
+
+        font-size:34px;
+
+    }
+
+    .experience_box p{
+
+        font-size:14px;
+
+    }
+
+    .section_subtitle{
+
+        font-size:16px;
+
+    }
+
+    .section_title{
+
+        font-size:30px;
+        line-height:42px;
+
+    }
+
+    .about_text{
+
+        font-size:16px;
+        line-height:28px;
+
+    }
+
+    .about_info{
+
+        grid-template-columns:1fr;
+        gap:15px;
+
+    }
+
+    .hire_btn{
+
+        display:table;
+        margin:0 auto;
+
+    }
+
+}
+
+
+/*============================
+      Small Mobile
+=============================*/
+
+@media (max-width:575px){
+
+    .about_area{
+
+        padding:50px 0;
+
+    }
+
+    .about_img{
+
+        width:240px;
+
+    }
+
+    .about_img img{
+
+        height:320px;
+
+    }
+
+    .experience_box{
+
+        width:130px;
+        padding:14px 10px;
+        right:-5px;
+        bottom:15px;
+
+    }
+
+    .experience_box h3{
+
+        font-size:28px;
+
+    }
+
+    .experience_box p{
+
+        font-size:13px;
+
+    }
+
+    .section_title{
+
+        font-size:26px;
+        line-height:36px;
+
+    }
+
+    .about_text{
+
+        font-size:15px;
+        line-height:26px;
+
+    }
+
+    .info_box{
+
+        padding:16px;
+
+    }
+
+    .info_box h6{
+
+        font-size:14px;
+
+    }
+
+    .info_box p{
+
+        font-size:15px;
+
+    }
+
+    .hire_btn{
+
+        width:100%;
+        text-align:center;
+        padding:15px 20px;
+
+    }
+
+}
+
+/*====================================
+
+        Skills Responsive
+
+====================================*/
+
+
+/*============================
+        Tablet
+=============================*/
+
+@media (max-width:991px){
+
+    .skills_section{
+
+        padding:80px 0;
+
+    }
+
+    .section_title{
+
+        margin-bottom:45px;
+
+    }
+
+    .section_title h2{
+
+        font-size:38px;
+
+    }
+
+    .skills_left{
+
+        margin-bottom:50px;
+
+    }
+
+}
+
+
+/*============================
+        Mobile
+=============================*/
+
+@media (max-width:767px){
+
+    .skills_section{
+
+        padding:60px 0;
+
+    }
+
+    .section_title{
+
+        margin-bottom:40px;
+
+    }
+
+    .section_title h5{
+
+        font-size:16px;
+
+    }
+
+    .section_title h2{
+
+        font-size:30px;
+
+    }
+
+    .section_title p{
+
+        font-size:15px;
+        line-height:28px;
+
+    }
+
+    .skills_left h3{
+
+        font-size:28px;
+
+    }
+
+    .skills_left p{
+
+        font-size:15px;
+        line-height:28px;
+        margin-bottom:30px;
+
+    }
+
+    .skill_item{
+
+        margin-bottom:25px;
+
+    }
+
+    .skills_cards{
+
+        margin-top:10px;
+        gap:20px;
+
+    }
+
+    .skill_card{
+
+        padding:30px 15px;
+
+    }
+
+    .skill_card i{
+
+        font-size:45px;
+
+    }
+
+    .skill_card h4{
+
+        font-size:20px;
+
+    }
+
+}
+
+
+/*============================
+      Small Mobile
+=============================*/
+
+@media (max-width:575px){
+
+    .skills_section{
+
+        padding:50px 0;
+
+    }
+
+    .section_title h2{
+
+        font-size:26px;
+
+    }
+
+    .section_title p{
+
+        font-size:14px;
+        line-height:26px;
+
+    }
+
+    .skills_left h3{
+
+        font-size:24px;
+
+    }
+
+    .skills_left p{
+
+        font-size:14px;
+        line-height:26px;
+
+    }
+
+    .skills_cards{
+
+        grid-template-columns:1fr;
+        gap:15px;
+
+    }
+
+    .skill_card{
+
+        padding:25px 15px;
+
+    }
+
+    .skill_card i{
+
+        font-size:40px;
+
+    }
+
+    .skill_card h4{
+
+        font-size:18px;
+
+    }
+
+}
+
+/*====================================
+
+        Footer Responsive
+
+====================================*/
+
+@media (min-width:768px) and (max-width:991px){
+
+    .footer_logo{
+
+        text-align:center;
+        margin-bottom:40px;
+
+    }
+
+    .footer_logo p{
+
+        max-width:500px;
+        margin:20px auto 0;
+
+    }
+
+    .footer_links,
+    .footer_contact{
+
+        text-align:center;
+
+    }
+
+    .footer_social{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:767px){
+
+    .footer_area{
+
+        text-align:center;
+
+    }
+
+    .footer_social{
+
+        justify-content:center;
+
+    }
+
+    .footer_links{
+
+        margin-top:15px;
+
+    }
+
+}
