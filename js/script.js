@@ -67,28 +67,162 @@ function startSkillAnimation() {
 
 }
 
-
 /*====================================
 
-        Wait For Fetch Include
+        Active Navbar
 
 ====================================*/
 
-const waitForSections = setInterval(() => {
+function activeMenu(){
+
+    const sections = document.querySelectorAll("section");
+
+    const navLinks = document.querySelectorAll(".menu_list .nav-link");
+
+    window.addEventListener("scroll", function(){
+
+        let current = "";
+
+        sections.forEach(function(section){
+
+        const top = section.offsetTop - 150;
+        const height = section.offsetHeight;
+
+        if(
+            window.scrollY >= top &&
+            window.scrollY < top + height
+         ){
+
+         current = section.id;
+
+        }
+
+    });
+
+        navLinks.forEach(function(link){
+
+            link.classList.remove("active");
+
+            if(link.getAttribute("href") === "#" + current){
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+}
+
+
+/*====================================
+
+    Mobile Menu Auto Close
+
+====================================*/
+
+function mobileMenuClose(){
+
+    const navLinks = document.querySelectorAll(".menu_list .nav-link");
+
+    navLinks.forEach(function(link){
+
+        link.addEventListener("click", function(){
+
+            const menu = document.getElementById("navbarMenu");
+
+            if(menu.classList.contains("show")){
+
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(menu);
+
+                bsCollapse.hide();
+
+            }
+
+        });
+
+    });
+
+}
+
+/*====================================
+
+        Scroll To Top
+
+====================================*/
+
+function scrollTopButton(){
+
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    if(!scrollBtn) return;
+
+    window.addEventListener("scroll", function(){
+
+        if(window.scrollY > 300){
+
+            scrollBtn.classList.add("show");
+
+        }else{
+
+            scrollBtn.classList.remove("show");
+
+        }
+
+    });
+
+    scrollBtn.addEventListener("click", function(){
+
+        window.scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+    });
+
+}
+
+/*====================================
+
+        Portfolio Initialize
+
+====================================*/
+
+function initPortfolio(){
+
+    navbarScroll();
+
+    startSkillAnimation();
+
+    activeMenu();
+
+    mobileMenuClose();
+
+    scrollTopButton();
+
+}
+
+/*====================================
+
+        Wait For Include
+
+====================================*/
+
+const waitForInclude = setInterval(function(){
 
     const navbar = document.querySelector(".main_menu");
-    const skills = document.querySelector(".progress-bar");
+    const sections = document.querySelectorAll("section");
 
-    if (navbar) {
-        navbarScroll();
+    if(navbar && sections.length > 0){
+
+        clearInterval(waitForInclude);
+
+        initPortfolio();
+
     }
 
-    if (skills) {
-        startSkillAnimation();
-    }
-
-    if (navbar && skills) {
-        clearInterval(waitForSections);
-    }
-
-}, 100);
+},100);

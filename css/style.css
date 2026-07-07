@@ -200,6 +200,12 @@ img{
     box-shadow:0 8px 20px rgba(0,0,0,.25);
 
 }
+
+@media only screen and (max-width: 575px){
+    .logo , .menu_btn i{
+        padding:0px 22px ;
+    }
+}
 /*====================================
 
         Hero Section Start
@@ -1996,5 +2002,93 @@ img{
         margin-top:20px;
 
     }
+
+}
+
+/*===== MOBILE SCREEN BELOW 575PX */
+
+@media only screen and (max-width: 575px){
+    .hero_left{
+        padding-left: 16px;
+    }
+
+    .about_content{
+        padding: 0px 16px;
+    }
+}
+
+/*====================================
+
+        Scroll To Top
+
+====================================*/
+
+#scrollTopBtn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#0ea5e9;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.4s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+#scrollTopBtn:hover{
+
+    background:#0284c7;
+
+    transform:translateY(-5px);
+
+}
+
+#scrollTopBtn.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+#scrollTopBtn{
+
+    right:20px;
+
+    bottom:20px;
+
+    width:45px;
+
+    height:45px;
+
+    font-size:18px;
 
 }
