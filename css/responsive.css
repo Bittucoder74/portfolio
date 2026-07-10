@@ -292,7 +292,8 @@
     .hero_img img{
         width:220px;
         height:220px;
-    }
+        margin-left:-4px ;
+    }   
 
     .download_btn,
     .project_btn{
